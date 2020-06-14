@@ -12,11 +12,14 @@ class App extends Component {
       searchField: ''
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this); // NOT needed when using arrow function
   }
 
+  // handleChange(e) {
+  //   this.setState({ searchField: e.target.value })
+  // }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({ searchField: e.target.value })
   }
 
